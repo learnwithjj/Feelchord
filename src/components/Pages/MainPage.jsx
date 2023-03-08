@@ -1,5 +1,5 @@
 import React from "react";
-import HeadPhone from '../assets/img/headphones.svg';
+import Logo from '../assets/img/Feelchordsimg1.jpg';
 import './css/MainPage.scss';
 import {Link} from "react-router-dom";
 
@@ -12,11 +12,11 @@ class MainPage extends React.Component{
                     </div>
                     <div className="main-row">
                         <div className="main-row-img">
-                            <img className="head-phone-img" src={HeadPhone} alt=""/>
+                            <img className="head-phone-img" src={Logo} alt=""/>
                         </div>
                         <div className="main-row-text">
-                            <h1>Music for everyone</h1>
-                            <p style={{marginBottom:"20px"}}>Without music, life would be a mistake</p>
+                            <h1>Greater than music</h1>
+                            <p style={{marginBottom:"20px"}}>lets's go</p>
                             <br ></br>
                             <div>
                             <Link to={"/SignUp"} className="btn" >

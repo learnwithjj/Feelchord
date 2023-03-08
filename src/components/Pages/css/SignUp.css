@@ -1,7 +1,8 @@
 .app
 {
     background: #794141;
-    background: linear-gradient(110deg, #eb4559 50%, #f78259 50%);
+  background: linear-gradient(110deg, #206c1c 50%, #a6f8c7 50%);
+  background: linear-gradient(110deg, #206c10 50%,  50%);
     height: 100vh;
     text-align: center;
     display: flex;
@@ -15,4 +16,12 @@
     font-size: 23px;
     font-weight: bold;
     padding-top: 15px;
+}
+.btn
+{
+    font-family: Consolas, sans-serif;
+        letter-spacing: 2px;
+        color: #9d2727;
+        font-size: 2rem;
+
 }
