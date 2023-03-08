@@ -1,7 +1,8 @@
 
 import React from "react";
-import './css/SignUp.css';
+import './css/SignUp.scss';
 import {Link} from "react-router-dom";
+import { GoogleLogin, GoogleLogout } from "react-google-login";
 
 class SignUp extends React.Component
 {
@@ -11,8 +12,7 @@ class SignUp extends React.Component
             <div className="app">
 
             <div style={{maxWidth:"500px",maxHeight:'100px'}}>
-            <div style={{paddingTop:"30px"}}>logo</div>
-                <div style={{fontWeight:"bold",fontSize:"35px",paddingTop:"30px",paddingBottom:"40px"}}>Sign up for free to start listening.</div>
+                <div style={{fontWeight:"bold",textAlign:"center",fontSize:"35px",paddingTop:"30px",paddingBottom:"40px"}}>Sign up for free to start listening.</div>
                 <div id="displayquestions">Enter your email</div>
                 <input type="text" placeholder="Enter your E-mail"></input>
                 <div id="displayquestions">Enter your password</div>
@@ -32,10 +32,17 @@ class SignUp extends React.Component
                 <input type="radio"/>Other
                 <input type="radio"/>Prefer not to say
                 </div>
+                <div classname ="bn">
+                <button>Sign up</button></div>
+                <div>
+            <h5>or</h5>
+            <br />
+            <GoogleLogin 
+            buttonText="Sign In with Google"/>
+            </div>
 
-                <button>Sign up</button>
                 <div>Have an account?</div>
-                <div id="login"><Link to={"/Login"} className="btn" style={{marginLeft:"60px"}}>
+                <div id="login"><Link to={"/Login"} className="btn" style={{marginLeft:"30px"}}>
                         Log in
                     </Link> 
                 </div>

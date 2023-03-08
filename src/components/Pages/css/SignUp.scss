@@ -3,7 +3,7 @@
     background: #794141;
   background: linear-gradient(110deg, #206c1c 50%, #a6f8c7 50%);
   background: linear-gradient(110deg, #206c10 50%,  50%);
-    height: 100vh;
+    height: 120vh;
     text-align: center;
     display: flex;
     flex-flow: column wrap;
@@ -23,5 +23,22 @@
         letter-spacing: 2px;
         color: #9d2727;
         font-size: 2rem;
+        text-align: left;
 
 }
+.bn{
+        font-family: Consolas, sans-serif;
+        letter-spacing: 2px;
+        border: none;
+        background-color: #206c10;
+        color: #060101;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        margin: 10px 0;
+        padding: 15px 20px;
+        border-radius: 5px;
+}
+.bn:hover{
+    opacity: 0.9;
+    cursor: pointer;
+  }

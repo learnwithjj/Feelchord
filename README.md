@@ -1,10 +1,10 @@
 <h1 align="center">
-   Vusic | The music destination you want.
+   Feelchords | connecting your soul.
 </h1>
 
 <div align="center">
 
-![Home Page](https://drive.google.com/uc?id=1ayxhKGDHtysZPMqti6k4ZY072nm3I3MZ)
+!
 
     A music app made with the help of React.js.
     

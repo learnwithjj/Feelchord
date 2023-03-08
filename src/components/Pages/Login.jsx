@@ -1,5 +1,8 @@
 
 import React from "react";
+import {Link} from "react-router-dom";
+import './css/Login.scss';
+
 
 
 class Login extends React.Component
@@ -9,14 +12,18 @@ class Login extends React.Component
         return(
             <div className="app">
                 <div>
-                <div>EmailAdress</div>
+                <div>EmailAddress</div>
                 <input type="text" placeholder="Email Address"></input>
-                <div>EmailAdress</div>
+                <div>Password</div>
                 <input type="password" placeholder="Password"></input>
                 <div>Forgot your password?</div>
-                <button>LOG IN </button>
+                <button><Link to={"/Home"}>
+                        LOG IN </Link></button>
                 <div>Don't have an account?</div>
-                <button>Sign up here</button>
+                <div><Link to={"/SignUp"} className="btn" style={{marginLeft:"60px"}}>
+                        Sign Up
+                    </Link> 
+                </div>
                 </div>
             </div>
         )

@@ -16,6 +16,7 @@ import Search from "./Search";
 import Playlist from "../fragment/Playlist";
 import {Skeleton} from "@material-ui/lab";
 
+
 function getCurrPage(pathName) {
     switch (pathName) {
         case "/home":
