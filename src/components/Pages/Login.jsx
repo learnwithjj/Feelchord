@@ -3,7 +3,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import './css/Login.scss';
 import {TbWritingSign} from "react-icons/tb";
-
+import Logo from '../assets/img/Feelchordsimg1.jpg';
 import {AiFillEye,AiFillEyeInvisible} from "react-icons/ai";
 // import {TextInput} from 'react-native';
 
@@ -25,6 +25,7 @@ import {AiFillEye,AiFillEyeInvisible} from "react-icons/ai";
                     
             <div style={{maxWidth:"500px",maxHeight:'100px'}}>
             <div id="loginbtnanime" style={{fontWeight:"bold",fontSize:"35px",display:"flex",alignItems:"center",marginTop:"200px",marginLeft:"50px"}}>To continue, log in to Feelchords<TbWritingSign/></div>
+            <div><img className="logo" src={Logo} alt=""/></div>
             <div style={{position:"absolute",right:"100px",top:"100px"}}> 
                 <div id="displayquestions" >EmailAddress</div>
                 <input id="formbox" type="text" placeholder="Email Address" style={{width:"300px"}}></input>

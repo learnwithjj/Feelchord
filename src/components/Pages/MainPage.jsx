@@ -2,6 +2,7 @@ import React from "react";
 import Logo from '../assets/img/Feelchordsimg1.jpg';
 import './css/MainPage.scss';
 import {Link} from "react-router-dom";
+import { GoogleLogin, GoogleLogout } from "react-google-login";
 
 class MainPage extends React.Component{
     render() {
@@ -27,6 +28,12 @@ class MainPage extends React.Component{
                                 Login 
                             </Link>
                             </div>
+                            <div>
+            <h5>or</h5>
+            <br />
+                {<GoogleLogin 
+                buttonText="Sign In with Google"/> }
+            </div>
                         </div>
                     </div>
             </section>

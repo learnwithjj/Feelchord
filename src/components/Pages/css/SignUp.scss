@@ -1,7 +1,7 @@
 .app
 {
     background: #794141;
-  background: linear-gradient(110deg, #206c1c 50%, #a6f8c7 50%);
+  background: linear-gradient(110deg, #1d6b1a 50%, #a6f8c7 50%);
   background: linear-gradient(110deg, #206c10 50%,  50%);
     height:140vh;
    
@@ -130,4 +130,9 @@
     {
         background-position: 2000px;
     }
+}
+.logo
+{
+  width: 30%;
+  height: 30vh;
 }

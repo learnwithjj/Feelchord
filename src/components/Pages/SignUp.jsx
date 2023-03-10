@@ -2,8 +2,8 @@
 import React from "react";
 import './css/SignUp.scss';
 import {Link} from "react-router-dom";
-
 import {AiFillEye,AiFillEyeInvisible} from "react-icons/ai";
+import Logo from '../assets/img/Feelchordsimg1.jpg';
 
     function SignUp()
     {
@@ -19,9 +19,11 @@ import {AiFillEye,AiFillEyeInvisible} from "react-icons/ai";
 
         return(
             <div className="app" style={{maxHeight:"120vh"}}>
+               
             
             <div style={{maxWidth:"1000px",maxHeight:'100px'}}>
                 <div id="btn-shine" style={{fontWeight:"bold",fontSize:"35px",display:"flex",alignItems:"center",marginTop:"150px",marginLeft:"50px"}}>Sign up for free to <br/><p style={{marginTop:"70px"}}>start listening.</p></div>
+                <div><img className="logo" src={Logo} alt=""/></div>
               <div style={{position:"absolute",right:"30px",top:"20px"}}> 
               <div id="displayquestions">Enter your email</div>
                 <input type="text" placeholder="Enter your E-mail" id="formbox"></input>
