@@ -3,7 +3,8 @@
     background: #794141;
   background: linear-gradient(110deg, #206c1c 50%, #a6f8c7 50%);
   background: linear-gradient(110deg, #206c10 50%,  50%);
-    height: 120vh;
+    height:140vh;
+   
     text-align: center;
     display: flex;
     flex-flow: column wrap;
@@ -17,7 +18,7 @@
     font-weight: bold;
     padding-top: 15px;
 }
-.btn
+#btn
 {
     font-family: Consolas, sans-serif;
         letter-spacing: 2px;
@@ -26,7 +27,7 @@
         text-align: left;
 
 }
-.bn{
+#btn{
         font-family: Consolas, sans-serif;
         letter-spacing: 2px;
         border: none;
@@ -38,7 +39,95 @@
         padding: 15px 20px;
         border-radius: 5px;
 }
-.bn:hover{
+#btn:hover{
     opacity: 0.9;
     cursor: pointer;
   }
+
+#formbox
+{
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#radiobutton
+{
+    padding-right: "50px";
+}
+
+
+#btn-shine
+{
+    // position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%,-50%);
+//   padding: 12px 48px;
+  color: #ffffff;
+  background: linear-gradient(to right, #330130 0, white 10%, #c5f47a 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-size: 50px;
+  text-decoration: none;
+  white-space: nowrap;
+    
+}
+
+@keyframes shine
+{
+  0%
+  {
+    background-position: 0;
+  }
+  20%
+  {
+    background-position: 100px;
+  }
+    40%
+  {
+    background-position: 200px;
+  }
+  60%
+  {
+    background-position: 300px;
+  }
+  80%
+  {
+    background-position: 400px;
+  }
+  100%
+  {
+    background-position: 500px;
+  }
+  120%
+  {
+    background-position: 600px;
+  }
+  140%
+  {
+    background-position: 700px;
+  }
+  160%
+  {
+    background-position: 800px;
+  }
+  200%
+  {
+    background-position: 1000px;
+  }
+  300%
+  {
+    background-position:1800px ;
+  }
+  500%
+    {
+        background-position: 2000px;
+    }
+}
