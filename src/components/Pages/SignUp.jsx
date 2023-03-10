@@ -3,7 +3,7 @@ import React from "react";
 import './css/SignUp.scss';
 import {Link} from "react-router-dom";
 import {AiFillEye,AiFillEyeInvisible} from "react-icons/ai";
-import Logo from '../assets/img/Feelchordsimg1.jpg';
+import Logo from '../assets/img/Feelc.png';
 
     function SignUp()
     {

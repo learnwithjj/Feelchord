@@ -3,7 +3,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import './css/Login.scss';
 import {TbWritingSign} from "react-icons/tb";
-import Logo from '../assets/img/Feelchordsimg1.jpg';
+import Logo from '../assets/img/Feelc.png';
 import {AiFillEye,AiFillEyeInvisible} from "react-icons/ai";
 // import {TextInput} from 'react-native';
 

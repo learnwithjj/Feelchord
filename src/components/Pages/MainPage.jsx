@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from '../assets/img/Feelchordsimg1.jpg';
+import Logo from '../assets/img/Feelc.png';
 import './css/MainPage.scss';
 import {Link} from "react-router-dom";
 import { GoogleLogin, GoogleLogout } from "react-google-login";

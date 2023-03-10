@@ -1,7 +1,7 @@
 .app
 {
     background: #794141;
-  background: linear-gradient(110deg, #1d6b1a 50%, #a6f8c7 50%);
+  background: linear-gradient(110deg, #f9fcf9 50%, #a6f8c7 50%);
   background: linear-gradient(110deg, #206c10 50%,  50%);
     height:140vh;
    
@@ -67,7 +67,7 @@
 //   transform: translate(-50%,-50%);
 //   padding: 12px 48px;
   color: #ffffff;
-  background: linear-gradient(to right, #330130 0, white 10%, #c5f47a 20%);
+  background: linear-gradient(to right, #330130 0, rgb(12, 0, 0) 10%, #4d691f 20%);
   background-position: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -133,6 +133,11 @@
 }
 .logo
 {
-  width: 30%;
-  height: 30vh;
+  width: 15%;
+  height: 21vh;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 15px 20px;
+  
 }
