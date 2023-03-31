@@ -64,4 +64,7 @@
   cursor: pointer;
 }
 
-/*# sourceMappingURL=Login.scss.map */
+.google-sign-in > img {
+  height: 30px;
+  width: auto;
+}

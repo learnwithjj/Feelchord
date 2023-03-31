@@ -3,13 +3,18 @@ import Logo from '../assets/img/Feelc.png';
 import './css/MainPage.scss';
 import {Link} from "react-router-dom";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
-
-class MainPage extends React.Component{
-    render() {
+import { auth } from "../../firebase";
+import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+const MainPage = ()=>{
+    const googleSignIn = () => {
+        const provider = new GoogleAuthProvider();
+        signInWithRedirect(auth, provider);
+      };
+   
         return(
             <section id="main">
                     <div className="nav-item">
-                        <a className="navbar-brand" href="/">FeelChord  </a>
+                        {/* <a className="navbar-brand" href="/">FeelChord  </a> */}
                     </div>
                     <div className="main-row">
                         <div className="main-row-img">
@@ -31,14 +36,24 @@ class MainPage extends React.Component{
                             <div>
             <h5>or</h5>
             <br />
-                {<GoogleLogin 
-                buttonText="Sign In with Google"/> }
+            
+            
+      <button className="google-sign-in " style={{cursor:"pointer",border:"none",backgroundColor:"#a6f8c7"}}>
+        <img
+        onClick={googleSignIn}
+        alt="sign in with google"
+        src="btn_google_signin_dark_pressed_web.png"
+        type="button"
+      />
+      </button>
+    
+    
             </div>
                         </div>
                     </div>
             </section>
-        );
+        )
     }
-}
+
 
 export default MainPage ;
