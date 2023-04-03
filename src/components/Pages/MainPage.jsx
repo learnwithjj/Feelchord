@@ -1,15 +1,23 @@
 import React from "react";
 import Logo from '../assets/img/Feelc.png';
 import './css/MainPage.scss';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { auth } from "../../firebase";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+
 const MainPage = ()=>{
-    const googleSignIn = () => {
-        const provider = new GoogleAuthProvider();
-        signInWithRedirect(auth, provider);
-      };
+    const navigate=useNavigate();
+  
+    const provider = new GoogleAuthProvider();
+    const signInWithGoogle = () => {
+        signInWithRedirect(auth,provider);
+        setTimeout(()=>
+        {
+            navigate('/home');
+        },300);
+      }
+    
    
         return(
             <section id="main">
@@ -40,7 +48,7 @@ const MainPage = ()=>{
             
       <button className="google-sign-in " style={{cursor:"pointer",border:"none",backgroundColor:"#a6f8c7"}}>
         <img
-        onClick={googleSignIn}
+        onClick={signInWithGoogle}
         alt="sign in with google"
         src="btn_google_signin_dark_pressed_web.png"
         type="button"

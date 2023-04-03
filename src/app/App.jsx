@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import './App.scss';
 import Home from "../components/Pages/Home";
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import MainPage from "../components/Pages/MainPage";
 import {ThemeContext, themes} from "../api/Theme";
 import musicDB from "../db/music";
@@ -32,12 +32,12 @@ const App = () => {
         <ThemeContext.Provider value={themes.light}>
             <>
                 <Router>
-                    <Switch>
-                        <Route path="/" exact component={MainPage}/>
-                        <Route path="/Login" component={Login}/>
-                        <Route path="/SignUp" component={SignUp}/>
-                        <Route path="/home" component={Home}/>
-                    </Switch>
+                    <Routes>
+                        <Route path='/' element={<MainPage/>}></Route>
+                        <Route path='/login' element={<Login/>}></Route>
+                        <Route path='/signup' element={<SignUp/>}></Route>
+                        <Route path='/home' element={<Home/>}/>
+                    </Routes>
                 </Router>
             </>
         </ThemeContext.Provider>
