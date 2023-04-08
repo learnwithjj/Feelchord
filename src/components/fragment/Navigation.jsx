@@ -31,9 +31,7 @@ function Navigation() {
         <nav style={useStyle.component}>
             <Brand/>
             <div className={"navigation"}>
-               {/* <NavigationButton href={"/home"} name={"Home"}/>*/}
-               {/* <NavigationButton href={"/home/about"} name={"About"}/>*/}
-                {/*<NavigationButton href={"/home/add"} name={"Add"}/>*/}
+               
             </div>
             <SearchBar/>
             <div className={"language"} onClick={handleOpenLanguageList}>

@@ -15,6 +15,8 @@ import CurrentPlayingLarge from "../fragment/CurrentPlayingLarge";
 import Search from "./Search";
 import Playlist from "../fragment/Playlist";
 import {Skeleton} from "@material-ui/lab";
+import  ChatBot  from "react-simple-chatbot";
+import Review from "../fragment/Review";
 
 
 function getCurrPage(pathName) {
@@ -72,13 +74,64 @@ function Home() {
         setLoaded(true)
     }, []);
 
-
+    function Chat()
+    {
+        return(
+            <div>
+                <ChatBot  
+      steps={[
+        {
+          id: '1',
+          message: 'What is your name?',
+          trigger: 'name',
+        },
+        {
+          id: 'name',
+          user: true,
+          trigger: '3',
+        },
+        {
+          id: '3',
+          message: 'Hi {previousValue}! How are you feeling today?',
+          trigger: 'data',
+        },
+        {
+            id:'data',
+            user:true,
+            trigger:'suggest'
+        },
+        {
+          id: 'suggest',
+          message: 'Let me suggest some songs for you',
+          trigger: 'review',
+        },
+        
+        {
+          id: 'review',
+          component: <Review />,
+          asMessage: true,
+          trigger: 'end-message',
+        },
+        
+        
+        {
+          id: 'end-message',
+          message: 'Thanks for your data',
+          end: true,
+        },
+      ]}
+    />
+            </div>
+        )
+    }
     return (
         <div style={useStyle.component} className={"home-container"}>
+            
             {
                 !loaded ?
                     <div className="Home-skeleton">
                         <Skeleton animation={"wave"} variant={"rect"} height={"100vh"}/>
+                        
                     </div>
                     :
                     <>
@@ -94,6 +147,7 @@ function Home() {
                             <div className="main-home">
                                 {
                                     Page
+                                
                                 }
                             </div>
                         </section>
@@ -116,8 +170,11 @@ function Home() {
                                 screenSize <= 970 && <BottomNavigationMobile/>
                             }
                         </React.Fragment>
+
+
                     </>
             }
+            <Chat/>
         </div>
     );
 }

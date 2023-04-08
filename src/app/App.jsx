@@ -9,6 +9,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setPlaylist} from "../actions/actions";
 import Login from "../components/Pages/Login";
 import SignUp from "../components/Pages/SignUp";
+import Profile from "../components/Pages/Profile";
 const App = () => {
 
     const {language} =  (state => state.musicReducer);
@@ -37,7 +38,8 @@ const App = () => {
                         <Route path='/login' element={<Login/>}></Route>
                         <Route path='/signup' element={<SignUp/>}></Route>
                         <Route path='/home' element={<Home/>}/>
-                    </Routes>
+                        <Route path='/profile' element={<Profile/>}/>
+                    </Routes>   
                 </Router>
             </>
         </ThemeContext.Provider>
