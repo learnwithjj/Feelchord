@@ -5,7 +5,7 @@ import './css/Login.scss';
 import {TbWritingSign} from "react-icons/tb";
 import Logo from '../assets/img/Feelc.png';
 import {AiFillEye,AiFillEyeInvisible} from "react-icons/ai";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword,sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../../firebase";
 
 
@@ -16,6 +16,12 @@ import { auth } from "../../firebase";
         const [emailLogin,setEmailLogin]=React.useState('');
         const [passwordLogin,setPasswordLogin]=React.useState('');
         
+        const Resetpass=async()=>
+        {
+            await sendPasswordResetEmail(auth,emailLogin);
+            
+            return(<div>{alert("Password reset sent!")}</div>)
+        }
        
         const [passvisible,setPassVisible]=React.useState(false);
         const togglePass=()=>
@@ -71,7 +77,7 @@ import { auth } from "../../firebase";
                 onChange={(e) => setPasswordLogin(e.target.value)} /> 
     <div style={{marginTop:"20px",cursor:"pointer"}}   onClick={togglePass}>{passvisible ? <AiFillEye/> : <AiFillEyeInvisible/>}</div>  </div>
                 
-                <div id="displayquestions">Forgot your password?</div>
+                <div id="displayquestions" style={{cursor:"pointer"}} onClick={Resetpass}>Forgot your password?</div>
                 <button id="btn" onClick={onSubmit} style={{cursor:"pointer"}}>LOG IN</button>
                 <div style={{marginTop:"10px"}}>Don't have an account?</div>
                 <div style={{marginTop:"10px"}}><Link to={"/SignUp"}  >
