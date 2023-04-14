@@ -10,6 +10,9 @@ import {setPlaylist} from "../actions/actions";
 import Login from "../components/Pages/Login";
 import SignUp from "../components/Pages/SignUp";
 import Profile from "../components/Pages/Profile";
+import Logout from "../components/fragment/Logout";
+
+
 const App = () => {
 
     const {language} =  (state => state.musicReducer);
@@ -38,7 +41,8 @@ const App = () => {
                         <Route path='/login' element={<Login/>}></Route>
                         <Route path='/signup' element={<SignUp/>}></Route>
                         <Route path='/home' element={<Home/>}/>
-                        <Route path='/profile' element={<Profile/>}/>
+                        <Route path='/home/profile' element={<Profile/>}/>
+                        <Route path='/home/logout' element={<Logout/>}/>
                     </Routes>   
                 </Router>
             </>

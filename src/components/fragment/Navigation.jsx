@@ -6,8 +6,10 @@ import DropDownLanguageList from "./DropDownLanguageList";
 import SearchBar from "./SearchBar";
 import Brand from "./Brand";
 import DropDownProfile from "./DropDownProfile";
-import {Avatar, Button} from "@material-ui/core";
+import {Button} from "@material-ui/core";
 import {ThemeContext} from "../../api/Theme";
+import {BiUser,BiMusic} from "react-icons/bi";
+import { IconContext } from "react-icons";
 
 function Navigation() {
 
@@ -18,13 +20,13 @@ function Navigation() {
     function handleOpenLanguageList() {
         if (isOpenProfile === true)
             setOpenProfile(!isOpenProfile);
-        setLangList(!isLanguageListOpen);
+            setLangList(!isLanguageListOpen);
     }
 
     function handleOpenProfile() {
         if (isLanguageListOpen === true)
             setLangList(!isLanguageListOpen);
-        setOpenProfile(!isOpenProfile);
+            setOpenProfile(!isOpenProfile);
     }
     const useStyle = useContext(ThemeContext);
     return (
@@ -38,7 +40,8 @@ function Navigation() {
                 <Button className={"Dropdown-btn"}
                         endIcon={isLanguageListOpen ? <ExpandMoreIcon/> : <ExpandLessIcon/>}>
                     <div className="wrapper">
-                        <p>Music Languages</p>
+                   
+                        <p> <IconContext.Provider value={{ color:"rgb(2, 58, 2)",style:{width:"35px",height:"20px"}}}><BiMusic/></IconContext.Provider> Languages</p>
                     </div>
                 </Button>
                 {
@@ -49,7 +52,8 @@ function Navigation() {
             </div>
             <div className="profile" onClick={handleOpenProfile}>
                 <Button className={"Dropdown-btn"}
-                        startIcon={<Avatar style={{width:'30px',height:'30px',padding:'18px'}} >U</Avatar>}
+                        
+                        startIcon={<IconContext.Provider value={{ color:"rgb(2, 58, 2)",style:{width:"38px",height:"28px"}}}><BiUser/></IconContext.Provider>}
                         endIcon={isOpenProfile ? <ExpandMoreIcon/> : <ExpandLessIcon/>}>
 
                 </Button>

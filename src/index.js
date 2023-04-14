@@ -5,7 +5,7 @@ import './index.scss';
 import {createStore} from "redux";
 import reducers from "./reducers/reducer";
 import {Provider} from 'react-redux';
-import Home from "./components/Pages/Home";
+
 // import {Router,Route,Routes } from "react-router-dom";
 
 const store = createStore(

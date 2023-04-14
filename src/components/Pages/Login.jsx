@@ -12,6 +12,7 @@ import { auth } from "../../firebase";
 
     function Login() {
       
+        
         const [emailLogin,setEmailLogin]=React.useState('');
         const [passwordLogin,setPasswordLogin]=React.useState('');
         
@@ -46,7 +47,7 @@ import { auth } from "../../firebase";
     
         return(
             <div className="app" style={{height:"100vh"}}>
-                
+          
                     
             <div style={{maxWidth:"500px",maxHeight:'100px'}}>
             <div id="loginbtnanime" style={{fontWeight:"bold",fontSize:"35px",display:"flex",alignItems:"center",marginTop:"200px",marginLeft:"50px"}}>To continue, log in to Feelchords<TbWritingSign/></div>

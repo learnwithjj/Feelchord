@@ -19,6 +19,7 @@ import  ChatBot  from "react-simple-chatbot";
 import Review from "../fragment/Review";
 
 
+import Logout from "../fragment/Logout";
 function getCurrPage(pathName) {
     switch (pathName) {
         case "/home":
@@ -29,6 +30,10 @@ function getCurrPage(pathName) {
             return <Profile/>
         case "/home/add":
             return <AddMusic/>
+
+        case "/home/logout":
+            return  (<div> </div> )
+             
         
         default:
             if (pathName.startsWith("/home/playlist/")) {
