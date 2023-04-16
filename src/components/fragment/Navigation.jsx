@@ -30,6 +30,8 @@ function Navigation() {
     }
     const useStyle = useContext(ThemeContext);
     return (
+       
+
         <nav style={useStyle.component}>
             <Brand/>
             <div className={"navigation"}>
@@ -51,6 +53,7 @@ function Navigation() {
                 }
             </div>
             <div className="profile" onClick={handleOpenProfile}>
+            {localStorage.getItem("user")}
                 <Button className={"Dropdown-btn"}
                         
                         startIcon={<IconContext.Provider value={{ color:"rgb(2, 58, 2)",style:{width:"38px",height:"28px"}}}><BiUser/></IconContext.Provider>}
@@ -62,6 +65,7 @@ function Navigation() {
                     <DropDownProfile/>
                 }
             </div>
+            
         </nav>
     );
 }

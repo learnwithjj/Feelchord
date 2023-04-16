@@ -8,11 +8,16 @@
   flex-flow: column;
   border: 1px solid #e0e0e0;
   border-radius:0 0 10px 10px;
+  background: linear-gradient(220deg, #f4f8f4 10%, #a6f8c7 10%);
+  height: 50vh;
   user-select: none;
+
   .dropdown-head{
     flex-flow: column;
     p{
-      color: gray;
+      color: darkgreen;
+      font-family: monospace;
+      font-size: 20px;
     }
   }
   .button-div{

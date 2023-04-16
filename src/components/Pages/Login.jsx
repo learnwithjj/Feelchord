@@ -35,8 +35,7 @@ import { auth } from "../../firebase";
             await signInWithEmailAndPassword(auth,emailLogin,passwordLogin)
             .then((result)=>
             {
-                const user = result.user;
-                console.log(user);
+                localStorage.setItem("user",emailLogin.split('@')[0]);
                 navigate("/home");
 
             })

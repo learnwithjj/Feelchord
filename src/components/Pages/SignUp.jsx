@@ -66,6 +66,7 @@ import { auth } from "../../firebase";
      <input type={passvisible ? "text" : "password"} required  id="formbox" style={{left:"0px",width:"300px",border:"0.5px solid lightgray",borderRight:"none"}}  placeholder="Enter your Password"    
  value={passwordSignup}
  onChange={(e) => setPasswordSignup(e.target.value)} /> 
+ 
     <div style={{marginTop:"20px",paddingLeft:"-40px",cursor:"pointer"}}   onClick={togglePass}>{passvisible ? <AiFillEye/> : <AiFillEyeInvisible/>}</div>  
     </div>
                 <div id="displayquestions">Confirm your password</div>

@@ -15,11 +15,9 @@ import CurrentPlayingLarge from "../fragment/CurrentPlayingLarge";
 import Search from "./Search";
 import Playlist from "../fragment/Playlist";
 import {Skeleton} from "@material-ui/lab";
-import  ChatBot  from "react-simple-chatbot";
-import Review from "../fragment/Review";
+import Popup from "../fragment/Popup";
 
 
-import Logout from "../fragment/Logout";
 function getCurrPage(pathName) {
     switch (pathName) {
         case "/home":
@@ -45,7 +43,14 @@ function getCurrPage(pathName) {
 
 function Home() {
 
-
+    const [isOpen, setIsOpen] = useState(false);
+ 
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
+    
+ 
+    
     const [screenSize, setScreenSize] = useState(undefined);
     const [currMusic, setCurrMusic] = useState(null);
     const [Page, setCurrPage] = useState(<MusicCardContainer/>);
@@ -79,59 +84,13 @@ function Home() {
         setLoaded(true)
     }, []);
 
-    function Chat()
-    {
-        return(
-            <div>
-                <ChatBot  
-      steps={[
-        {
-          id: '1',
-          message: 'What is your name?',
-          trigger: 'name',
-        },
-        {
-          id: 'name',
-          user: true,
-          trigger: '3',
-        },
-        {
-          id: '3',
-          message: 'Hi {previousValue}! How are you feeling today?',
-          trigger: 'data',
-        },
-        {
-            id:'data',
-            user:true,
-            trigger:'suggest'
-        },
-        {
-          id: 'suggest',
-          message: 'Let me suggest some songs for you',
-          trigger: 'review',
-        },
-        
-        {
-          id: 'review',
-          component: <Review />,
-          asMessage: true,
-          trigger: 'end-message',
-        },
-        
-        
-        {
-          id: 'end-message',
-          message: 'Thanks for your data',
-          end: true,
-        },
-      ]}
-    />
-            </div>
-        )
-    }
+    
+            
+
+    
     return (
         <div style={useStyle.component} className={"home-container"}>
-            
+
             {
                 !loaded ?
                     <div className="Home-skeleton">
@@ -146,9 +105,9 @@ function Home() {
                                 <Navigation/>
                         }
                         <section className={"home-music-container"}>
-                            <div className="sidebar-home">
+                            {/* <div className="sidebar-home">
                                 <SideBar/>
-                            </div>
+                            </div> */}
                             <div className="main-home">
                                 {
                                     Page
@@ -163,6 +122,7 @@ function Home() {
                                 <CurrentPlayingLarge/>
                             </section>
                         }
+                        
                         <React.Fragment>
                             {
                                 currMusic
@@ -179,7 +139,7 @@ function Home() {
 
                     </>
             }
-            <Chat/>
+            {/* <Chat/> */}
         </div>
     );
 }
