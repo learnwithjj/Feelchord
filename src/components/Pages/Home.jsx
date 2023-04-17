@@ -15,8 +15,9 @@ import CurrentPlayingLarge from "../fragment/CurrentPlayingLarge";
 import Search from "./Search";
 import Playlist from "../fragment/Playlist";
 import {Skeleton} from "@material-ui/lab";
-import Popup from "../fragment/Popup";
-
+import Modal from "../fragment/Modal";
+import Chat from "../fragment/Chat";
+import styles from "../assets/scss/modal.module.css";
 
 function getCurrPage(pathName) {
     switch (pathName) {
@@ -86,11 +87,18 @@ function Home() {
 
     
             
-
-    
+    const [pop,setPop]=React.useState(false);
+    React.useEffect(()=>
+    {
+        setPop(true)
+    },[])
     return (
         <div style={useStyle.component} className={"home-container"}>
-
+          
+          
+           {pop &&  <Modal show={pop} onClose={() => setPop(false)}>
+       
+      </Modal>}
             {
                 !loaded ?
                     <div className="Home-skeleton">
