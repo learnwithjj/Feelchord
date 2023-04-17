@@ -29,7 +29,8 @@
     "react-scripts": "5.0.1",
     "react-simple-chatbot": "^0.6.1",
     "redux": "4.0.5",
-    "sass": "1.49.11"
+    "sass": "1.49.11",
+    "sentiment": "^5.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

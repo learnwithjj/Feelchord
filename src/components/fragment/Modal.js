@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "../assets/scss/modal.module.css";
 import Chat from "../fragment/Chat";
-import {BiWindowClose} from "react-icons/bi"
+import {BiWindowClose} from "react-icons/bi";
+
+
 const Modal = ({ show, onClose, children }) => {
   if (!show) {
     return null;

@@ -1,11 +1,11 @@
 import  ChatBot  from "react-simple-chatbot";
-import Review from "./Review"
-import React,{Component} from "react"
+import Require from "./Require"
+import React from "react"
 import styles from "../assets/scss/modal.module.css";
 function Chat()
     {
 
-      const config={floating:true};
+      
       const steps=[{
         id: '1',
         message: 'What is your name?',
@@ -19,10 +19,10 @@ function Chat()
       {
         id: '3',
         message: 'Hi {previousValue}! How are you feeling today?',
-        trigger: 'data',
+        trigger: 'senti',
       },
       {
-          id:'data',
+          id:'senti',
           user:true,
           trigger:'suggest'
       },
@@ -34,7 +34,7 @@ function Chat()
       
       {
         id: 'review',
-        component: <Review />,
+        component: <Require/>,
         asMessage: true,
         trigger: 'end-message',
       },

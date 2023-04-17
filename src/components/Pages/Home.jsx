@@ -147,7 +147,7 @@ function Home() {
 
                     </>
             }
-            {/* <Chat/> */}
+            
         </div>
     );
 }
