@@ -35,16 +35,18 @@ function Chat()
       {
         id: 'review',
         component: <Require/>,
-        asMessage: true,
-        trigger: 'end-message',
+        // asMessage: true,
+        // trigger: 'end-message',
+        // message:'Thanks for your data',
+        end:true,
       },
       
       
-      {
-        id: 'end-message',
-        message: 'Thanks for your data',
-        end: true,
-      },
+      // {
+      //   id: 'end-message',
+      //   message: 'Thanks for your data',
+      //   end: true,
+      // },
 
       ]
         return(
