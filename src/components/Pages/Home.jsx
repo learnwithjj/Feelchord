@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useState,createContext} from "react";
 import './css/Home.scss';
 import Navigation from "../fragment/Navigation";
 import MobileTopNavigation from "../fragment/MobileTopNavigation";
@@ -44,22 +44,15 @@ function getCurrPage(pathName) {
 
 function Home() {
 
-    const [isOpen, setIsOpen] = useState(false);
  
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-  }
-    
- 
-    
     const [screenSize, setScreenSize] = useState(undefined);
     const [currMusic, setCurrMusic] = useState(null);
-    const [Page, setCurrPage] = useState(<MusicCardContainer/>);
-
+    // const [Page, setCurrPage] = useState(<MusicCardContainer/>);
+    
     let pathname = window.location.pathname;
-    useEffect(() => {
-        setCurrPage(getCurrPage(pathname))
-    }, [pathname]);
+    // useEffect(() => {
+    //     setCurrPage(getCurrPage(pathname))
+    // }, [pathname]);
 
     window.addEventListener("resize", handleResize);
 
@@ -71,7 +64,7 @@ function Home() {
         handleResize();
         return () => window.removeEventListener("resize", handleResize);
     });
-
+    
     const useStyle = useContext(ThemeContext);
     const {playing, bannerOpen} = useSelector(state => state.musicReducer);
 
@@ -91,13 +84,16 @@ function Home() {
     React.useEffect(()=>
     {
         setPop(true)
+        
     },[])
+        
+        
     return (
         <div style={useStyle.component} className={"home-container"}>
           
           
            {pop &&  <Modal show={pop} onClose={() => setPop(false)}>
-       
+            
       </Modal>}
             {
                 !loaded ?
@@ -118,8 +114,7 @@ function Home() {
                             </div> */}
                             <div className="main-home">
                                 {
-                                    Page
-                                
+                                     pop?<div id="main"></div>:<MusicCardContainer/>                              
                                 }
                             </div>
                         </section>
@@ -133,6 +128,7 @@ function Home() {
                         
                         <React.Fragment>
                             {
+                                pop?<div></div>:
                                 currMusic
                                     ?
                                     <FooterMusicPlayer music={currMusic}/>
