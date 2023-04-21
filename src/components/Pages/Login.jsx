@@ -49,7 +49,33 @@ import { auth } from "../../firebase";
                 // ..
             });
         }
+        const [updateLogin,setUpdateLogin]=React.useState('');
+        const handleChange=(event)=>
+        {
+            setEmailLogin()
+        }
+        const handleKeyDown=(event)=>
+        {
+            if(event.key==="Enter")
+            {
+                signInWithEmailAndPassword(auth,emailLogin,passwordLogin)
+                .then((result)=>
+                {
+                    localStorage.setItem("user",emailLogin.split('@')[0]);
+                    navigate("/home");
     
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    setEmailLogin('');
+                    setPasswordLogin('');
+                    console.log(errorCode, errorMessage);
+                    alert(errorMessage);
+                    // ..
+                });
+            }
+        }
         return(
             <div className="app" style={{height:"100vh"}}>
           
@@ -71,10 +97,16 @@ import { auth } from "../../firebase";
                 <div id="displayquestions">Password</div>
                 
                 <div style={{display:"flex",marginLeft:"30px"}}> 
-                <input type={passvisible ? "text" : "password"} required  id="formbox" style={{left:"0px",width:"250px",border:"0.5px solid lightgray",borderRight:"none"}}  placeholder="Enter your Password"    
+                <input type={passvisible ? "text" : "password"}
+                 required  id="formbox" 
+                 style={{left:"0px",width:"250px",border:"0.5px solid lightgray",borderRight:"none"}}  
+                 placeholder="Enter your Password"    
                 value={passwordLogin}
-                onChange={(e) => setPasswordLogin(e.target.value)} /> 
-    <div style={{marginTop:"20px",cursor:"pointer"}}   onClick={togglePass}>{passvisible ? <AiFillEye/> : <AiFillEyeInvisible/>}</div>  </div>
+                onChange={(e) => setPasswordLogin(e.target.value)}
+                onKeyDown={handleKeyDown} /> 
+                
+
+                <div style={{marginTop:"20px",cursor:"pointer"}}   onClick={togglePass}>{passvisible ? <AiFillEye/> : <AiFillEyeInvisible/>}</div>  </div>
                 
                 <div id="displayquestions" style={{cursor:"pointer"}} onClick={Resetpass}>Forgot your password?</div>
                 <button id="btn" onClick={onSubmit} style={{cursor:"pointer"}}>LOG IN</button>
