@@ -23,15 +23,15 @@ const getSentiment=()=>
   localStorage.setItem("sentiment","");
   if(res.score>0)
   {
-    localStorage.setItem("sentiment","positive");
+    localStorage.setItem("sentiment","happy");
   }
   else if(res.score<0)
   {
-    localStorage.setItem("sentiment","negative");
+    localStorage.setItem("sentiment","sad");
   }
   else 
   {
-    localStorage.setItem("sentiment","neutral");
+    localStorage.setItem("sentiment","okay");
   }
   console.log(localStorage.getItem("sentiment"));
 }

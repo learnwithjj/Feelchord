@@ -13,7 +13,6 @@ import AddMusic from "../fragment/AddMusic";
 import FooterSelectMusic from "../fragment/FooterSelectMusic";
 import CurrentPlayingLarge from "../fragment/CurrentPlayingLarge";
 import Search from "./Search";
-import Playlist from "../fragment/Playlist";
 import {Skeleton} from "@material-ui/lab";
 import Modal from "../fragment/Modal";
 import Chat from "../fragment/Chat";
@@ -35,9 +34,7 @@ function getCurrPage(pathName) {
              
         
         default:
-            if (pathName.startsWith("/home/playlist/")) {
-                return <Playlist/>
-            }
+           
             return null
     }
 }

@@ -13,7 +13,6 @@
   .modal {
     min-width: 400px;
     min-height: 300px;
-    background: white;
     border-radius: 5px;
     display: flex;
     justify-content: center;

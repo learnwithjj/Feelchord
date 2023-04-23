@@ -17,32 +17,33 @@ const DropDownLanguageList = () => {
         "Malayalam",
         "Tamil"
     ];
-    const [selectedList, setSelectedList] = useState({
-        "Any": false,
-        "Hindi":false,
-        "Kannada":false,
-        "Malayalam":false,
-        "Tamil":false,
+    // const [selectedList, setSelectedList] = useState({
+    //     "Any": false,
+    //     "Hindi":false,
+    //     "Kannada":false,
+    //     "Malayalam":false,
+    //     "Tamil":false,
 
-    });
-    const handleSelected = (val, selected) => {
-        setSelectedList(prevState => {
-            return {
-                ...prevState,
-                [val]: selected
-            };
-        });
-    };
-    const dispatch = useDispatch();
-    const handleLangSelect = (e) => {
-        e.preventDefault();
-        let list = [];
-        for (let i in selectedList) {
-            if (selectedList[i] === true)
-                list.push(i.toLowerCase());
-        }
-        dispatch(setMusicLang(list));
-    };
+    // });
+    // const handleSelected = (val, selected) => {
+    //     setSelectedList(prevState => {
+    //         return {
+    //             ...prevState,
+    //             [val]: selected
+    //         };
+    //     });
+    // };
+    // const dispatch = useDispatch();
+    // const handleLangSelect = (e) => {
+    //     e.preventDefault();
+    //     let list = [];
+    //     for (let i in selectedList) {
+    //         if (selectedList[i] === true)
+    //             list.push(i.toLowerCase());
+    //     }
+    //     dispatch(setMusicLang(list));
+       
+    // };
 
 
     return (
@@ -53,15 +54,15 @@ const DropDownLanguageList = () => {
             <div className={"lang-list"}>
                 {listOfLanguage.map((item) => {
                     return (
-                        <LangList onClick={handleSelected} key={item} item={item}/>
+                        <LangList onClick={localStorage.setItem("language",item)} key={item} item={item}/>
                     );
                 })}
             </div>
-            <div className={"button-div"}>
+            {/* <div className={"button-div"}>
                 <Button onClick={handleLangSelect} style={useStyle.button.contained}>
                     Update
                 </Button>
-            </div>
+            </div> */}
         </div>
     );
 }

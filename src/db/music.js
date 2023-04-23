@@ -8,6 +8,7 @@ let musicDB = [
         author_name: "Clarx",
         img: "shakedown.jpg",
         lang: "ENGLISH",
+        mood: "okay",
         timesPlayed: 0,
         type: "electronic",
         musicName: "Clarx - Shakedown [NCS Release].mp3",
@@ -24,6 +25,7 @@ let musicDB = [
         author_name: "Bernardo R.",
         img: "notAvailable.jpg",
         lang: null,
+        mood: "happy",
         timesPlayed: 0,
         type:"instrumental",
         musicName: "mixkit-games-worldbeat-466.mp3",
@@ -42,6 +44,7 @@ let musicDB = [
         lang: "ENGLISH",
         type: "electronic",
         timesPlayed: 0,
+        mood:"sad",
         musicName: "ROY KNOX -  Over My Head (Feat. Mike Robert) [NCS Release].mp3",
         attribution: {
             song: "ROY KNOX - Over My Head (Feat. Mike Robert) [NCS Release]",
@@ -56,6 +59,7 @@ let musicDB = [
         author_name: "Subtact, Sara Skinner",
         img: "want-you-feat-sara-skinner-1586956276-s4lOrfrHQj.jpg",
         lang: "ENGLISH",
+        mood:"happy",
         timesPlayed: 0,
         type: "electronic",
         musicName: "Subtact - Want You (feat. Sara Skinner) [NCS Release].mp3",
@@ -73,6 +77,7 @@ let musicDB = [
         img: "apocalypse-1600776027-tsCmgK4gEU.jpg",
         lang: "ENGLISH",
         timesPlayed: 0,
+        mood:"okay",
         type: "electronic",
         musicName: "Midranger - Apocalypse [NCS Release].mp3",
         attribution: {
@@ -89,6 +94,7 @@ let musicDB = [
         img: "alive.jpg",
         lang: "ENGLISH",
         timesPlayed: 0,
+        mood:"sad",
         type: "electronic",
         musicName: "N3WPORT - Alive (feat. Neoni) [NCS Release].mp3",
         attribution: {
@@ -104,6 +110,7 @@ let musicDB = [
         author_name: "Kevin MacLeod",
         img: "notAvailable.jpg",
         lang: "ENGLISH",
+        mood:"happy",
         timesPlayed: 0,
         type:"instrumental",
         musicName: "impact.mp3",
@@ -122,6 +129,7 @@ let musicDB = [
         lang: "ENGLISH",
         timesPlayed: 0,
         type:"instrumental",
+        mood:"okay",
         musicName: "impact2.mp3",
         attribution: {
             song: "Impact Moderato",
@@ -137,6 +145,7 @@ let musicDB = [
         img: "ignite-1600419626-nHn4WXY79q.jpg",
         lang: "ENGLISH",
         timesPlayed: 0,
+        mood:"happy",
         type: "electronic",
         musicName: "Heuse & Tom Wilson - Ignite [NCS Release].mp3",
         attribution: {

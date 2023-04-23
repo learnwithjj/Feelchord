@@ -11,7 +11,7 @@ function Chat()
         background:'#c8e6c9',
         headerBgColor: '#66bb6a',
         headerfontFamily:'monospace',
-        botBubbleColor:  '#69f0ae', 
+        botBubbleColor:  '#399393', 
         userBubbleColor: '#4dd0e1',
       };
       const steps=[{

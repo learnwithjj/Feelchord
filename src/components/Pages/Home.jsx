@@ -13,11 +13,9 @@ import AddMusic from "../fragment/AddMusic";
 import FooterSelectMusic from "../fragment/FooterSelectMusic";
 import CurrentPlayingLarge from "../fragment/CurrentPlayingLarge";
 import Search from "./Search";
-import Playlist from "../fragment/Playlist";
 import {Skeleton} from "@material-ui/lab";
 import Modal from "../fragment/Modal";
-import Chat from "../fragment/Chat";
-import styles from "../assets/scss/modal.module.css";
+
 import Suggestions from "./Suggestions";
 
 function getCurrPage(pathName) {
@@ -40,9 +38,7 @@ function getCurrPage(pathName) {
              
         
         default:
-            if (pathName.startsWith("/home/playlist/")) {
-                return <Playlist/>
-            }
+            
             return null
     }
 }
@@ -57,6 +53,7 @@ function Home() {
     let pathname = window.location.pathname;
     useEffect(() => {
         setCurrPage(getCurrPage(pathname))
+       
     }, [pathname]);
 
     window.addEventListener("resize", handleResize);
@@ -114,9 +111,7 @@ function Home() {
                                 <Navigation/>
                         }
                         <section className={"home-music-container"}>
-                            {/* <div className="sidebar-home">
-                                <SideBar/>
-                            </div> */}
+                            
                             <div className="main-home">
                                 {
                                      pop?<div id="main"></div>:<MusicCardContainer/>                              
