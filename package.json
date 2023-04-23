@@ -28,6 +28,7 @@
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "react-simple-chatbot": "^0.6.1",
+    "react-speech-recognition": "^3.10.0",
     "redux": "4.0.5",
     "sass": "1.49.11",
     "sentiment": "^5.0.2"

@@ -25,7 +25,7 @@
   margin: 5px;
 }
 .dropdown .lang-list button:hover {
-  background-color: black;
+  background-color: #1abc9c;
   cursor: pointer;
 }
 .dropdown .button-div {

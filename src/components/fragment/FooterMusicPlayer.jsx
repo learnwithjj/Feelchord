@@ -16,6 +16,7 @@ import {ThemeContext} from "../../api/Theme";
 import {useDispatch, useSelector} from "react-redux";
 import {setBannerOpen, setCurrentPlaying} from "../../actions/actions";
 import Button from "@material-ui/core/Button";
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 function FooterMusicPlayer({music}) {
 
@@ -37,6 +38,8 @@ function FooterMusicPlayer({music}) {
     const useStyle = useContext(ThemeContext);
     const pointer = { cursor: "pointer",  color: useStyle.theme };
 
+
+   
     const handleToggle = (type, val) => {
         switch (type) {
             case "repeat":
@@ -134,6 +137,60 @@ function FooterMusicPlayer({music}) {
             s = Math.floor((t - Date.parse("1/1/70")) / 3600000) + s.substr(2);
         return s.substring(3);
     }
+    const commands = [
+        {
+          command: 'play',
+          callback: () => {setPlayPauseClicked(true)}
+        },
+        {
+          command: 'pause',
+          callback: () =>{setPlayPauseClicked(!isPlaying)}
+        },
+        {
+          command: 'repeat',
+          callback: () => {setRepeatClick(true)}
+        },
+        {
+            command: 'next',
+            callback: ()=>{setNextClicked(true)}
+        },
+        {
+            command:'mute',
+            callback:()=>{setVolumeClicked(true)}
+        },
+        {
+            command:'unmute',
+            callback:()=>{setVolumeClicked(!isVolumeClicked)}
+        }
+      ]
+      const {
+        transcript,
+        interimTranscript,
+        finalTranscript,
+        resetTranscript,
+        listening,
+      } = useSpeechRecognition({ commands });
+
+      React.useEffect(()=>{
+        SpeechRecognition.startListening({
+          continuous: true,
+          language: 'en-GB',
+        })
+ } );
+      React.useEffect(() => {
+        if (finalTranscript !== '') {
+          console.log('Got final result:', finalTranscript);
+        }
+      }, [interimTranscript, finalTranscript]);
+      if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+        return null;
+      }
+     
+      if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+        console.log('Your browser does not support speech recognition software! Try Chrome desktop, maybe?');
+      }
+     
+    
     return (
         <div style={useStyle.component} className={"footer-player"}>
             <div className="playback">
@@ -144,12 +201,13 @@ function FooterMusicPlayer({music}) {
                             value={seekTime} onChange={handleSeekChange}/>
                 }
             </div>
+           
             <Button
                     startIcon={<Avatar variant="square" src={require("../assets/img/" + img)} alt={name}/>}
                     onClick={handleBannerToggle}
                     className="curr-music-container">
                 <div className="curr-music-details">
-                    <Name name={name} className={"song-name"} length={name.length}/>
+                    <Name name={name} className={"song-na   me"} length={name.length}/>
                     <Name name={author_name} className={"author-name"}
                           length={author_name.length}/>
                 </div>
@@ -168,10 +226,11 @@ function FooterMusicPlayer({music}) {
 
                 <audio ref={audioElement} src={require("../assets/music/" + musicName)} preload={"metadata"}/>
 
-                <ControlsToggleButton style={pointer} type={"play-pause"}
-                                      defaultIcon={<PlayArrowIcon fontSize={"large"}/>}
-                                      changeIcon={<PauseIcon fontSize={"large"}/>}
-                                      onClicked={handleToggle}/>
+                        <ControlsToggleButton style={pointer} type={"play-pause"}
+                        defaultIcon={<PlayArrowIcon fontSize={"large"}/>}
+                        changeIcon={<PauseIcon fontSize={"large"}/>}
+                        onClicked={handleToggle}/>
+                
 
 
                 <ControlsToggleButton style={pointer} type={"next"}
