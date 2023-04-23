@@ -11,6 +11,7 @@ import Login from "../components/Pages/Login";
 import SignUp from "../components/Pages/SignUp";
 import Profile from "../components/Pages/Profile";
 import Logout from "../components/fragment/Logout";
+import Suggestions from "../components/Pages/Suggestions";
 
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
                         <Route path='/home' element={<Home/>}/>
                         <Route path='/home/profile' element={<Profile/>}/>
                         <Route path='/home/logout' element={<Logout/>}/>
+                        <Route path='/home/suggestions' element={<Suggestions/>}/>
                     </Routes>   
                 </Router>
             </>

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState,createContext} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import './css/Home.scss';
 import Navigation from "../fragment/Navigation";
 import MobileTopNavigation from "../fragment/MobileTopNavigation";
@@ -18,6 +18,7 @@ import {Skeleton} from "@material-ui/lab";
 import Modal from "../fragment/Modal";
 import Chat from "../fragment/Chat";
 import styles from "../assets/scss/modal.module.css";
+import Suggestions from "./Suggestions";
 
 function getCurrPage(pathName) {
     switch (pathName) {
@@ -29,6 +30,10 @@ function getCurrPage(pathName) {
             return <Profile/>
         case "/home/add":
             return <AddMusic/>
+        
+        case "/home/suggestions":
+            return <Suggestions/>
+
 
         case "/home/logout":
             return  (<div> </div> )
@@ -47,12 +52,12 @@ function Home() {
  
     const [screenSize, setScreenSize] = useState(undefined);
     const [currMusic, setCurrMusic] = useState(null);
-    // const [Page, setCurrPage] = useState(<MusicCardContainer/>);
+    const [Page, setCurrPage] = useState(<MusicCardContainer/>);
     
     let pathname = window.location.pathname;
-    // useEffect(() => {
-    //     setCurrPage(getCurrPage(pathname))
-    // }, [pathname]);
+    useEffect(() => {
+        setCurrPage(getCurrPage(pathname))
+    }, [pathname]);
 
     window.addEventListener("resize", handleResize);
 

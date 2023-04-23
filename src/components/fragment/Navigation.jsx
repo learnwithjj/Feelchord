@@ -34,9 +34,7 @@ function Navigation() {
 
         <nav style={useStyle.component}>
             <Brand/>
-            <div className={"navigation"}>
-               
-            </div>
+            
             <SearchBar/>
             <div className={"language"} onClick={handleOpenLanguageList}>
                 <Button className={"Dropdown-btn"}

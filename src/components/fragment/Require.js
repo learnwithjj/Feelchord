@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Sentiment from 'sentiment';
 import {RiGhostSmileFill} from "react-icons/ri";
 import userContext from "../Pages/Home";
+import {Link, useNavigate} from "react-router-dom";
+
 const Require = (props)  => {
   const [state, setState] = useState({ senti:''});
   const [result,getresult]=useState('');
@@ -31,8 +33,10 @@ const getSentiment=()=>
   {
     localStorage.setItem("sentiment","neutral");
   }
+  console.log(localStorage.getItem("sentiment"));
 }
   const { senti} = state;
+  const navigate=useNavigate();
   React.useEffect(()=>
   {
     getSentiment()
@@ -46,7 +50,7 @@ const getSentiment=()=>
       <div >
         
         <div style={{fontSize:"16px"}}>Thanks for your data!<RiGhostSmileFill style={{width:"30px",height:"20px"}}/> </div>
-        
+        {navigate('/home/suggestions')}
         </div>
     );
 }

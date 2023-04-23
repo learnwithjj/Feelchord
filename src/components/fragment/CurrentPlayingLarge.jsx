@@ -22,20 +22,7 @@ function CurrentPlayingLarge() {
                     </div>
                 </div>
             </div>
-            {/*
-            <div className="music-right">
-
-                <div className={"music-card-span"}>
-                    {
-                        playlists
-                            .filter(i=>i.id !== id)
-                            .map(i=>(
-                                <MusicCardSpan key={i.id} music={i} />
-                            ))
-                    }
-                </div>
-            </div>
-*/}
+           
         </div>
     );
 }

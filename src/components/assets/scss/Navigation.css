@@ -1,9 +1,10 @@
+
 nav {
   height: 10vh;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  background-color: #f6f6f6;
+  background-color: #3d0d0d;
   user-select: none;
 }
 nav div {
