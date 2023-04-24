@@ -44,25 +44,24 @@ const getSentiment=()=>
 
   const pop = useContext(userContext);
 
-
-
+ 
     return (
       <div >
         
         <div style={{fontSize:"16px"}}>Thanks for your data!<RiGhostSmileFill style={{width:"30px",height:"20px"}}/> </div>
-       { setTimeout(() => console.log('Initial timeout!'), 10000)}
+       
         {navigate('/home/suggestions')}
         
         </div>
     );
 }
 
-Require.propTypes = {
-  steps: PropTypes.object,
-};
+  Require.propTypes = {
+    steps: PropTypes.object,
+  };
 
-Require.defaultProps = {
-  steps: undefined,
-};
+  Require.defaultProps = {
+    steps: undefined,
+  };
 
 export default Require;

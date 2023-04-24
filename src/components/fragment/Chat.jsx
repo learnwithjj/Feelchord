@@ -5,7 +5,7 @@ import styles from "../assets/scss/modal.module.css";
 import { ThemeProvider } from "styled-components";
 function Chat()
     {
-
+      const user=localStorage.getItem("user");
       const theme=
       {
         background:'#c8e6c9',
@@ -14,9 +14,10 @@ function Chat()
         botBubbleColor:  '#399393', 
         userBubbleColor: '#4dd0e1',
       };
-      const steps=[{
+      const steps=[
+      {
         id: '1',
-        message: 'What is your name?',
+        message: 'Hi I am Sonu! What can we call you?',
         trigger: 'name',
       },
       {
@@ -26,7 +27,7 @@ function Chat()
       },
       {
         id: '3',
-        message: 'Hi {previousValue}! How are you feeling today?',
+        message: 'Hi {previousValue} How are you feeling today?',
         trigger: 'senti',
       },
       {
