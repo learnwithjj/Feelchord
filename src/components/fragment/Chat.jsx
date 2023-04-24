@@ -59,7 +59,7 @@ function Chat()
           
             <div >
               <ThemeProvider theme={theme}>
-                <ChatBot headerTitle="Your mood finder" recognitionEnable={true} steps={steps}/>
+                <ChatBot headerTitle="Your mood finder" recognitionEnable={true} steps={steps} botAvatar="robot.svg" userAvatar="userbot.svg"/>
                 </ThemeProvider>
     </div>
         )
