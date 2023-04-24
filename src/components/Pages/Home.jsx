@@ -129,11 +129,11 @@ function Home() {
                         <React.Fragment>
                             {
                                 pop?<div></div>:
-                                currMusic
-                                    ?
+                                // currMusic
+                                //     ?
                                     <FooterMusicPlayer music={currMusic}/>
-                                    :
-                                    <FooterSelectMusic/>
+                                    // :
+                                    // <FooterSelectMusic/>
                             }
                             {
                                 screenSize <= 970 && <BottomNavigationMobile/>

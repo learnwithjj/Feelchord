@@ -16,23 +16,6 @@ import Suggestions from "../components/Pages/Suggestions";
 
 const App = () => {
 
-    const {language} =  (state => state.musicReducer);
-
-    const dispatch = useDispatch();
-    // useEffect(()=>{
-    //     if (language === null || language.includes("any")){
-    //         dispatch(setPlaylist(musicDB))
-    //     }
-    //     else if (language.includes('hindi')){
-    //         alert("No hindi tracks available")
-    //     } else {
-    //         let x = musicDB.filter((item)=>(
-    //             item.lang && language.includes(item.lang.toLowerCase())
-    //         ))
-    //         dispatch(setPlaylist(x))
-    //     }
-    // },[dispatch, language]);
-
     return (
         <ThemeContext.Provider value={themes.light}>
             <>

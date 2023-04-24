@@ -119,11 +119,11 @@ function Suggestions() {
                         <React.Fragment>
                             {
                                 
-                                currMusic
-                                    ?
+                                // currMusic
+                                //     ?
                                     <FooterMusicPlayer music={currMusic}/>
-                                    :
-                                    <FooterSelectMusic/>
+                                    // :
+                                    // <FooterSelectMusic/>
                             }
                             {
                                 screenSize <= 970 && <BottomNavigationMobile/>
