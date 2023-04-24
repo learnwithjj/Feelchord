@@ -114,7 +114,7 @@ function Home() {
                             
                             <div className="main-home">
                                 {
-                                     pop?<div id="main"></div>:<MusicCardContainer/>                              
+                                     pop?<div style={{background:"lightgrey"}}></div>:<MusicCardContainer/>                              
                                 }
                             </div>
                         </section>

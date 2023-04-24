@@ -9,7 +9,7 @@ function Chat()
       const theme=
       {
         background:'#c8e6c9',
-        headerBgColor: '#66bb6a',
+        headerBgColor: '#2e7d32',
         headerfontFamily:'monospace',
         botBubbleColor:  '#399393', 
         userBubbleColor: '#4dd0e1',
