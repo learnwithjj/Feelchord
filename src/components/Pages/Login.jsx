@@ -82,7 +82,7 @@ import { auth } from "../../firebase";
                     
             <div style={{maxWidth:"500px",maxHeight:'100px'}}>
             <div id="loginbtnanime" style={{fontWeight:"bold",fontSize:"35px",display:"flex",alignItems:"center",marginTop:"200px",marginLeft:"50px"}}>To continue, log in to Feelchords<TbWritingSign/></div>
-            <div><img className="logo" src={Logo} alt=""/></div>
+            <img style={{width:"25%",position:"absolute",top:"10px",left:"15px"}} src={Logo}  alt=""/>
             <div style={{position:"absolute",right:"100px",top:"100px"}}> 
                 <div id="displayquestions" >EmailAddress</div>
                 <input

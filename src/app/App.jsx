@@ -12,7 +12,7 @@ import SignUp from "../components/Pages/SignUp";
 import Profile from "../components/Pages/Profile";
 import Logout from "../components/fragment/Logout";
 import Suggestions from "../components/Pages/Suggestions";
-
+import Search from "../components/Pages/Search";
 
 const App = () => {
 
@@ -28,6 +28,7 @@ const App = () => {
                         <Route path='/home/profile' element={<Profile/>}/>
                         <Route path='/home/logout' element={<Logout/>}/>
                         <Route path='/home/suggestions' element={<Suggestions/>}/>
+                        <Route path='/search' element={<Search/>}/>
                     </Routes>   
                 </Router>
             </>

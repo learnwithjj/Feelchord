@@ -49,7 +49,7 @@ import { auth } from "../../firebase";
             
             <div style={{maxWidth:"1000px",maxHeight:'100px'}}>
                 <div id="btn-shine" style={{fontWeight:"bold",fontSize:"35px",display:"flex",alignItems:"center",marginTop:"150px",marginLeft:"50px"}}>Sign up for free to <br/><p style={{marginTop:"70px"}}>start listening.</p></div>
-                <div><img className="logo" src={Logo} alt=""/></div>
+                <img style={{width:"25%",position:"absolute",top:"10px",left:"15px"}} src={Logo}  alt=""/>
               <div style={{position:"absolute",right:"30px",top:"20px"}}> 
               <div id="displayquestions">Enter your email</div>
                 <input
