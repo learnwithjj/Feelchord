@@ -3,10 +3,8 @@ import './css/Search.scss';
 import Container from "../fragment/Container";
 import {useSelector} from "react-redux";
 import MusicCard from "../fragment/MusicCard";
-import SearchMusic from "../assets/img/searchMusic.svg";
-import SearchMusicMp3 from "../assets/img/searchMusicMp3.svg";
-import SearchMusicDisc from "../assets/img/searchMusicDisc.svg";
-import ArrowUp from '../assets/img/left.svg';
+
+
 
 const Search = () => {
     const {playlists, search} = useSelector(state => state.musicReducer);
@@ -29,10 +27,7 @@ const Search = () => {
                     ?
                     <div className={"Search"}>
                         <div className="Search-img">
-                            <img className={"Rotate-img"} src={SearchMusicDisc} alt="search-music-icon"/>
-                            <img src={SearchMusicMp3} alt="search-music-icon"/>
-                            <img src={SearchMusic} alt="search-music-icon"/>
-                            <img className={"Arrow"} src={ArrowUp} alt=""/>
+                           
                         </div>
                     </div>
                     :

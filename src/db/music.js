@@ -111,10 +111,79 @@ let musicDB = [
         timesPlayed: 0,
         musicName: "Jugjugg Jeeyo.mp3",
         img:"Jugjugg Jeeyo.jpg"
-    }
-    
+    },
+    {
+        id:11,
+        name: "Wake me up",
+        author_name: "Avici",
+        language: "english",
+        mood: "okay",
+        timesPlayed: 0,
+        musicName: "Wake me up.mp3",
+        img:"Wake me up.jpg"
+    },
+    {
+        id:12,
+        name: "Counting stars",
+        author_name: "One Republic",
+        language: "english",
+        mood: "okay",
+        timesPlayed: 0,
+        musicName: "Counting stars.mp3",
+        img:"Counting stars.jpg"
+    },
+    {
+        id:13,
+        name: "We don't talk anymore",
+        author_name: "Charlie Puth, Selena Gomez",
+        language: "english",
+        mood: "sad",
+        timesPlayed: 0,
+        musicName: "We don't talk anymore.mp3",
+        img:"We don't talk anymore.jpg"
+    },
 
+    {
+        id:14,
+        name: "Titanium",
+        author_name: "Sia",
+        language: "english",
+        mood: "happy",
+        timesPlayed: 0,
+        musicName: "Titanium.mp3",
+        img:"Titanium.jpg"
+    },
 
+    {
+        id:15,
+        name: "Dusk Till Dawn.mp3",
+        author_name: "Zayn",
+        language: "english",
+        mood: "okay",
+        timesPlayed: 0,
+        musicName: "Dusk Till Dawn.mp3",
+        img:"Dusk Till Dawn.jpg"
+    },
+    {
+        id:16,
+        name: "Right Now (Na Na Na)",
+        author_name: "Akon",
+        language: "english",
+        mood: "happy",
+        timesPlayed: 0,
+        musicName: "Right Now (Na Na Na).mp3",
+        img:"Right Now (Na Na Na).jpg"
+    },
+    {
+        id:16,
+        name: "On The Floor",
+        author_name: "Pitbull",
+        language: "english",
+        mood: "happy",
+        timesPlayed: 0,
+        musicName: "On The Floor.mp3",
+        img:"On The Floor.png"
+    },
 
     // {
     //     id: 0,
