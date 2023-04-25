@@ -17,7 +17,7 @@ function Chat()
       const steps=[
       {
         id: '1',
-        message: 'Hi I am Sonu! What can we call you?',
+        message: 'Hi I am Joe! What can we call you?',
         trigger: 'name',
       },
       {

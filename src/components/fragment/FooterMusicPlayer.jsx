@@ -17,7 +17,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setBannerOpen, setCurrentPlaying} from "../../actions/actions";
 import Button from "@material-ui/core/Button";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-
+import {BsFillPlayFill} from "react-icons/bs";
 function FooterMusicPlayer({music}) {
 
     const [{id, name, author_name, img, musicName}, setCurrTrack] = useState(music);
@@ -140,7 +140,15 @@ function FooterMusicPlayer({music}) {
     const commands = [
         {
           command: 'play',
-          callback: () => {setPlayPauseClicked(true)}
+          callback: () => {setPlayPauseClicked(!isPlaying)}
+        },
+        {
+            command: "hey joe play" ,
+          callback: () => {setPlayPauseClicked(!isPlaying)}
+        },
+        {
+            command: "hey joe pause" ,
+          callback: () => {setPlayPauseClicked(!isPlaying)}
         },
         {
           command: 'pause',
@@ -151,7 +159,15 @@ function FooterMusicPlayer({music}) {
           callback: () => {setRepeatClick(true)}
         },
         {
+            command: 'hey joe repeat',
+            callback: () => {setRepeatClick(true)}
+          },
+        {
             command: 'next',
+            callback: ()=>{setNextClicked(true)}
+        },
+        {
+            command: 'hey joe next',
             callback: ()=>{setNextClicked(true)}
         },
         {
@@ -159,9 +175,35 @@ function FooterMusicPlayer({music}) {
             callback:()=>{setVolumeClicked(true)}
         },
         {
+            command:'hey joe mute',
+            callback:()=>{setVolumeClicked(true)}
+        },
+        {
             command:'unmute',
             callback:()=>{setVolumeClicked(!isVolumeClicked)}
-        }
+        },
+        {
+            command:'hey joe unmute',
+            callback:()=>{setVolumeClicked(!isVolumeClicked)}
+        },
+        {
+             command:'hey joe increase volume',
+            callback:()=>{setVolume(volume+25)}
+        },
+        {
+            command:'hey joe volume up',
+           callback:()=>{setVolume(volume+25)}
+        },
+        {
+            command:'hey joe volume down',
+           callback:()=>{setVolume(volume-25)}
+        },
+        {
+            command:'hey joe decrease volume',
+           callback:()=>{setVolume(volume-25)}
+       },
+        
+
       ]
       const {
         transcript,
@@ -226,11 +268,11 @@ function FooterMusicPlayer({music}) {
 
                 <audio ref={audioElement} src={require("../assets/music/" + musicName)} preload={"metadata"}/>
 
-                        <ControlsToggleButton style={pointer} type={"play-pause"}
-                        defaultIcon={<PlayArrowIcon fontSize={"large"}/>}
+                      <ControlsToggleButton style={pointer} type={"play-pause"}
+                        defaultIcon={!isPlaying?<PlayArrowIcon fontSize={"large"}/>:<PauseIcon fontSize={"large"}/>}
                         changeIcon={<PauseIcon fontSize={"large"}/>}
                         onClicked={handleToggle}/>
-                
+                   
 
 
                 <ControlsToggleButton style={pointer} type={"next"}
