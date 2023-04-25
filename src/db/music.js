@@ -175,7 +175,7 @@ let musicDB = [
         img:"Right Now (Na Na Na).jpg"
     },
     {
-        id:16,
+        id:17,
         name: "On The Floor",
         author_name: "Pitbull",
         language: "english",
@@ -184,6 +184,127 @@ let musicDB = [
         musicName: "On The Floor.mp3",
         img:"On The Floor.png"
     },
+    {
+        id:18,
+        name: "Martin Garrix-Animals",
+        author_name: "Martin-Garrix",
+        language: "english",
+        mood: "happy",
+        timesPlayed: 0,
+        musicName: "Martin Garrix - Animals.m4a",
+        img:"animals.jpeg"
+    },
+    {
+        id:19,
+        name: "Magenta Riddim",
+        author_name: "dj snake",
+        language: "english",
+        mood: "happy",
+        timesPlayed: 0,
+        musicName: "DJ Snake-Magenta Riddim.m4a",
+        img:"magenta.jpeg"
+    },
+    {
+        id:20,
+        name: "Cherathukal",
+        author_name: "-",
+        language: "malayalam",
+        mood: "sad",
+        timesPlayed: 0,
+        musicName: "Cherathukal.m4a",
+        img:"kumbalangi nights.jpeg"
+    },
+    {
+        id:21,
+        name: "Uyiril Thodum",
+        author_name: "-",
+        language: "malayalam",
+        mood: "happy",
+        timesPlayed: 0,
+        musicName: "Uyiril Thodum.m4a",
+        img:"kumbalangi nights.jpeg"
+    },
+    {
+        id:22,
+        name: "Manavalan thug",
+        author_name: "-",
+        language: "malayalam",
+        mood: "happy",
+        timesPlayed: 0,
+        musicName: "Manavaalan-Thug.mp3",
+        img:"thallumalla.jpg"
+    },
+    {
+        id:23,
+        name: "Thallumalla-Paattu",
+        author_name: "-",
+        language: "malayalam",
+        mood: "okay",
+        timesPlayed: 0,
+        musicName: "Thallumalla-Paattu.mp3",
+        img:"thallumalla.jpg"
+    },
+    {
+        id:24,
+        name: "singara siriye",
+        author_name: "-",
+        language: "Kannada",
+        mood: "sad",
+        timesPlayed: 0,
+        musicName: "Kantara-Singara Siriye.m4a",
+        img:"kantara.jpeg"
+    },
+    {
+        id:25,
+        name: "varaha roopam",
+        author_name: "-",
+        language: "Kannada",
+        mood: "happy",
+        timesPlayed: 0,
+        musicName: "Kantara-Varaha Roopam.m4a",
+        img:"kantara.jpeg"
+    },
+    {
+        id:26,
+        name: "salaam rocky bhai",
+        author_name: "-",
+        language: "Kannada",
+        mood: "happy",
+        timesPlayed: 0,
+        musicName: "salam.m4a",
+        img:"kgf1.jpeg"
+    },
+    {
+        id:27,
+        name: "Bombe heluthaithe",
+        author_name: "-",
+        language: "Kannada",
+        mood: "sad",
+        timesPlayed: 0,
+        musicName: "RAAJAKUMARA.m4a",
+        img:"rajakumara.jpeg"
+    },
+    {
+        id:28,
+        name: "VIKRAM Title Track",
+        author_name: "-",
+        language: "tamil",
+        mood: "happy",
+        timesPlayed: 0,
+        musicName: "VIKRAM Title Track.m4a",
+        img:"vikram.jpeg"
+    },
+    {
+        id:29,
+        name: "Naan naan",
+        author_name: "-",
+        language: "tamil",
+        mood: "happy",
+        timesPlayed: 0,
+        musicName: "Mahaan-Naan Naan.m4a",
+        img:"Mahaan.jpeg"
+    },
+    
 
     // {
     //     id: 0,
