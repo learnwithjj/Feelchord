@@ -5,7 +5,7 @@ import styles from "../assets/scss/modal.module.css";
 import { ThemeProvider } from "styled-components";
 function Chat()
     {
-      const user=localStorage.getItem("user");
+      
       const theme=
       {
         background:'#c8e6c9',
@@ -60,7 +60,7 @@ function Chat()
           
             <div >
               <ThemeProvider theme={theme}>
-                <ChatBot headerTitle="Your mood finder" recognitionEnable={true} steps={steps} botAvatar="robot.svg" userAvatar="userbot.svg"/>
+                <ChatBot headerTitle="Your mood finder..." recognitionEnable={true} steps={steps} botAvatar="robot.svg" userAvatar="userbot.svg"/>
                 </ThemeProvider>
     </div>
         )
