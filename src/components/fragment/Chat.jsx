@@ -60,7 +60,9 @@ function Chat()
           
             <div >
               <ThemeProvider theme={theme}>
-                <ChatBot headerTitle="Your mood finder..." recognitionEnable={true} steps={steps} botAvatar="robot.svg" userAvatar="userbot.svg"/>
+                <ChatBot headerTitle="Your mood finder..."
+                speechSynthesis={{ enable: true, lang: 'en' }}
+                 recognitionEnable={true} steps={steps} botAvatar="robot.svg" userAvatar="userbot.svg"/>
                 </ThemeProvider>
     </div>
         )
