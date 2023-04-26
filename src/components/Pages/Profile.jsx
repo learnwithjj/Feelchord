@@ -5,7 +5,6 @@ import {useSelector} from "react-redux";
 import MusicCard from "../fragment/MusicCard";
 import Container from "../fragment/Container";
 import Grade from 'grade-js';
-import SideBarOptions from "../fragment/SideBarOptions";
 import {PlaylistPlay} from "@material-ui/icons";
 
 function Profile() {
@@ -43,12 +42,7 @@ function Profile() {
                     <div className="profile-detail">
                         <h3>{localStorage.getItem("user")}</h3>
                         
-                        <span className={"profile-playlist"}>
-                            <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay}
-                                            href={"/home/playlist/instrumental"} title={"Instrumental"}/>
-                            <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} href={"/home/playlist/electronic"}
-                                            title={"Electronic"}/>
-                        </span>
+                        
                     </div>
                 </div>
                 <div className="bottom-profile">

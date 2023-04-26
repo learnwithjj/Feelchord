@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useState} from "react";
 import './css/Home.scss';
 import Navigation from "../fragment/Navigation";
 import MobileTopNavigation from "../fragment/MobileTopNavigation";
-import SideBar from "../fragment/SideBar";
 import FooterMusicPlayer from "../fragment/FooterMusicPlayer";
 import BottomNavigationMobile from "../fragment/BottomNavigationMobile";
 import MusicCardContainer from "../fragment/MusicCardContainer";
@@ -14,9 +13,7 @@ import FooterSelectMusic from "../fragment/FooterSelectMusic";
 import CurrentPlayingLarge from "../fragment/CurrentPlayingLarge";
 import Search from "./Search";
 import {Skeleton} from "@material-ui/lab";
-import Modal from "../fragment/Modal";
-import Chat from "../fragment/Chat";
-import styles from "../assets/scss/modal.module.css";
+
 
 function getCurrPage(pathName) {
     switch (pathName) {

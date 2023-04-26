@@ -12,10 +12,10 @@ const DropDownLanguageList = () => {
 
     const listOfLanguage = [
         "Any",
-        "Hindi",
-        "Kannada",
-        "Malayalam",
-        "Tamil"
+        "hindi",
+        "kannada",
+        "malayalam",
+        "tamil"
     ];
     // const [selectedList, setSelectedList] = useState({
     //     "Any": false,

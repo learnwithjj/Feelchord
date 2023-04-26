@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useState} from "react";
 import './css/Home.scss';
 import Navigation from "../fragment/Navigation";
 import MobileTopNavigation from "../fragment/MobileTopNavigation";
-import SideBar from "../fragment/SideBar";
 import FooterMusicPlayer from "../fragment/FooterMusicPlayer";
 import BottomNavigationMobile from "../fragment/BottomNavigationMobile";
 import MusicCardContainer from "../fragment/MusicCardContainer";

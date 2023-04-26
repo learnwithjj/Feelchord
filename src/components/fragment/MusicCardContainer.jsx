@@ -11,10 +11,16 @@ function MusicCardContainer() {
         <Container>
             <div className={"music-card-container"}>
                 {
-                    pathname==='/home'? playlists.map(item => (
-                    <MusicCard key={item.id} music={item}/>
-                )):
-                    playlists.map(item => (item.mood===localStorage.getItem("sentiment") &&
+                    pathname==='/home'?
+                     
+                    
+                    
+
+                   ( playlists.map(item => (
+                        <MusicCard key={item.id} music={item}/>  )))
+                        
+                        :
+                    playlists.map(item => (item.mood===localStorage.getItem("sentiment") &&  
                         <MusicCard key={item.id} music={item}/>
                     ))
                 }

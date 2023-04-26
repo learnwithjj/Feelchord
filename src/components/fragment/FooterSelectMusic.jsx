@@ -8,7 +8,7 @@ function FooterSelectMusic() {
 
     return (
         <div className={"Footer_Select_Music"}>
-            <Link to={"/home"}>
+            <Link >
                 Select a music to continue
             </Link>
         </div>
